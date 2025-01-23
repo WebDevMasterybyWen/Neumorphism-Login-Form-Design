@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+    --accent-color: #f72c5b;
+    --background-color: #dce6f2;
+    --primary-color: #e6e7ee;
+    --text-color: #000;
+
+    --box-shadow: 
+        -5px -5px 9px #ffffff73,
+        5px 5px 9px #5e68794d;
+    --inset-shadow: 
+        inset -5px -5px 9px #ffffff73,
+        inset 5px 5px 9px #5e68794d;
+}
+
+* {
+    font-family: "Fira Code", serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.wrapper {
+    width: 420px;
+    border-radius: 10px;
+    padding: 30px 40px;
+    background-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+.icons {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.icons div {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all 400ms;
+}
+
+.icons div:hover {
+    scale: 1.1;
+    color: var(--accent-color);
+}
+
+input {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: transparent;
+    box-shadow: var(--inset-shadow);
+    padding-left: 25px;
+    font: inherit;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border: 0.5rem solid transparent;
+    border-radius: 15px;
+    font: inherit;
+    font-weight: 700;
+    background-color: transparent;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+button:hover,
+button:focus-visible {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+button:active {
+    color: var(--accent-color);
+    box-shadow: var(--box-shadow),
+                var(--inset-shadow);
+}
+
+
